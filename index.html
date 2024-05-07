@@ -31,6 +31,7 @@
         // on the other hand both can't be redecalare.
 
         // var
+
     // 1. var "can't" call outside the "funtion" if it is decleare inside the funtion
     // 2. var "can" call outside the "block" if its declare inside the block  
 
@@ -40,26 +41,83 @@
             var c = 1132;
         }
         console.log(c)
+
+        // Declearing var in  "Function"
+        
         // function myFunction(){
         //     var d = 44;
         // }
         // console.log(d)
 
-//         function add(a, b) {
-//     return a + b;
-// }
+        // Create a funtion of adding two numbers 1 & 2
+        function add(a, b) {
+        return a + b;
+        }
+        let result = add(1 , 2); // Call the add function with arguments 1 and 2
+            console.log(result); // Output: 3
 
-// let result = add(5, 3); // Call the add function with arguments 5 and 3
-// console.log(add); // Output: 8
+        // Q1---Define a function called greet that takes a name as a parameter and logs a greeting message to the console.
+        function greet(name){
+            console.log( "Hey " + name);
+        }
+        greet("Hi how are you?")
+        greet("abdurrehman");
 
-function calculateCircleArea(radius) {
-    return Math.PI * radius * radius;
-}
+        // Q2---Define a function called square that takes a number as a parameter and returns the square of that number.
+        function square(squareof){
+            return (squareof)**2;
+        }
+        console.log ("Square of the value is " + square(2))
+        
+        // Q3---Define a function called sum that takes two numbers as parameters and returns their sum.
+        function sum(val1,val2){
+            return val1+val2 ;
+        }
+        let f = 45;
+        let x = 55;
+        console.log("Sum of val1 & val2 is " + sum(f,x))
 
-let radius = 5;
-let area = calculateCircleArea(radius);
-console.log("The area of the circle with radius " + radius + " is " + area);
+        // Q---4 Define a function expression called multiply that takes two numbers as parameters and returns their product.
+        const multiply = function(para1,para2){
+            return para1*para2;
+        }
+        let v1 = 2;
+        let v2 = 4;
+        console.log(multiply(v1,v2))
 
+        // Q---5 Rewrite the sum function from task 3 using an arrow function.
+        const addition=(a,b)=>{
+            return a+b;
+        }
+        let first=23;
+        let second=47;
+        console.log("Sum of values is " + addition(first,second))
+
+        //Arrow Function
+
+         const addnum=(a,b)=>{
+            a+b;
+         }   
+        let d=23;
+        let g=34;
+        console.log(a+b)
+        
+        // pass by refrance
+
+        let value1 = 21;
+        let value2 = 23; 
+        const changed=(updatebyref)=>{
+            return updatebyref(33,33)
+        }
+
+        const changebyval=(num1,num2)=>{
+            ab=num1;
+            cd=num2;
+        }
+
+        changed(changebyval)
+        console.log(ab,cd)
+        
     </script>
 </body>
 </html>
